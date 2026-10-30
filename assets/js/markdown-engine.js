@@ -1,6 +1,6 @@
-import { Storage } from './storage.js';
-import { QuizEngine } from './quiz-engine.js';
-import { COURSE_FILES_FALLBACK } from './course-fallback.js';
+import { Storage } from './storage.js?v=2';
+import { QuizEngine } from './quiz-engine.js?v=2';
+import { COURSE_FILES_FALLBACK } from './course-fallback.js?v=2';
 
 let activeLessonCharts = [];
 

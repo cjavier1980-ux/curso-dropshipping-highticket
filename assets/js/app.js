@@ -1,6 +1,6 @@
-import { Storage } from './storage.js';
-import { MarkdownEngine } from './markdown-engine.js';
-import { Calculators } from './calculators.js';
+import { Storage } from './storage.js?v=2';
+import { MarkdownEngine } from './markdown-engine.js?v=2';
+import { Calculators } from './calculators.js?v=2';
 
 const TEMPLATES_CATALOG = [
   { mod: '00', title: 'Carta Operativa Personal y Reglas de Riesgo', file: 'm00-carta-operativa-personal.md', type: 'Markdown / Documento', desc: 'Define tu presupuesto inicial, horario de 12 h/semana, horario de atención telefónica y código ético.' },

@@ -6,7 +6,8 @@ echo =====================================================================
 echo   SUBIENDO CAMBIOS Y NUEVAS LECCIONES A TU CUENTA DE GITHUB
 echo =====================================================================
 echo.
-git add .
+gh auth setup-git
+git add -A
 git commit -m "Actualizacion de lecciones y contenido del curso"
 git push origin main
 echo.
