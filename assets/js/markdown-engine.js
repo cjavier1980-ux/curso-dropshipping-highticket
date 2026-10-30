@@ -1,7 +1,29 @@
 import { Storage } from './storage.js';
 import { QuizEngine } from './quiz-engine.js';
+import { COURSE_FILES_FALLBACK } from './course-fallback.js';
 
 let activeLessonCharts = [];
+
+async function fetchTextWithFallback(path) {
+  const isFileProtocol = window.location.protocol === 'file:';
+  if (!isFileProtocol) {
+    try {
+      const res = await fetch(path, { cache: 'no-cache' });
+      if (res.ok) {
+        const text = await res.text();
+        if (!text.trim().toLowerCase().startsWith('<!doctype html') && !text.trim().toLowerCase().startsWith('<html')) {
+          return text;
+        }
+      }
+    } catch (e) {
+      // Usar respaldo integrado si falla la red
+    }
+  }
+  if (COURSE_FILES_FALLBACK && COURSE_FILES_FALLBACK[path]) {
+    return COURSE_FILES_FALLBACK[path];
+  }
+  return null;
+}
 
 export const MarkdownEngine = {
   catalog: [],
@@ -51,91 +73,75 @@ export const MarkdownEngine = {
     return { meta, body };
   },
 
-  // Auto-descubrimiento secuencial de módulos y lecciones sin tocar el código
+  // Auto-descubrimiento de módulos y lecciones con respaldo instantáneo integrado
   async discoverCourseContent() {
-    const modules = [];
-    // Sondeamos modulo-00 hasta modulo-20; se detiene cuando ya no existen módulos consecutivos
-    for (let m = 0; m <= 20; m++) {
-      const modNum = String(m).padStart(2, '0');
-      try {
-        const res = await fetch(`curso/modulo-${modNum}/modulo.md`, { cache: 'no-cache' });
-        if (!res.ok) {
-          if (m > 12) break;
-          continue;
-        }
-        const text = await res.text();
-        // Verificar que no sea un HTML 404 devuelto por algún servidor SPA
-        if (text.trim().toLowerCase().startsWith('<!doctype html')) {
-          if (m > 12) break;
-          continue;
-        }
+    const moduleNumbers = Array.from({ length: 14 }, (_, i) => String(i).padStart(2, '0'));
 
-        const { meta } = this.parseFrontmatter(text);
-        const lessons = [];
+    const modulePromises = moduleNumbers.map(async (modNum) => {
+      const modPath = `curso/modulo-${modNum}/modulo.md`;
+      const text = await fetchTextWithFallback(modPath);
+      if (!text) return null;
 
-        // Auto-descubrimiento de lecciones: leccion-01.md, leccion-02.md, ... hasta primer 404
-        for (let l = 1; l <= 30; l++) {
-          const lecNum = String(l).padStart(2, '0');
-          const lecPath = `curso/modulo-${modNum}/leccion-${lecNum}.md`;
-          try {
-            const lRes = await fetch(lecPath, { cache: 'no-cache' });
-            if (!lRes.ok) break;
-            const lText = await lRes.text();
-            if (lText.trim().toLowerCase().startsWith('<!doctype html')) break;
+      const { meta } = this.parseFrontmatter(text);
+      const lessons = [];
 
-            const parsedLec = this.parseFrontmatter(lText);
-            lessons.push({
-              key: `m${modNum}-l${lecNum}`,
-              moduleNum: modNum,
-              lessonNum: lecNum,
-              path: lecPath,
-              meta: {
-                titulo: parsedLec.meta.titulo || `Lección ${lecNum}`,
-                nivel: parsedLec.meta.nivel || meta.nivel || 'Básico',
-                duracion: parsedLec.meta.duracion || '30 min',
-                prerrequisitos: parsedLec.meta.prerrequisitos || 'Ninguno',
-                resumen: parsedLec.meta.resumen || '',
-                entregable: parsedLec.meta.entregable || '',
-                plantilla: parsedLec.meta.plantilla || meta.plantilla_modulo || ''
-              },
-              rawBody: parsedLec.body
-            });
-          } catch (err) {
-            break;
-          }
-        }
+      // Auto-descubrimiento secuencial de lecciones: leccion-01.md, leccion-02.md...
+      for (let l = 1; l <= 25; l++) {
+        const lecNum = String(l).padStart(2, '0');
+        const lecPath = `curso/modulo-${modNum}/leccion-${lecNum}.md`;
+        const lText = await fetchTextWithFallback(lecPath);
+        if (!lText) break;
 
-        modules.push({
-          id: `modulo-${modNum}`,
-          numero: modNum,
-          titulo: meta.titulo || `Módulo ${modNum}`,
-          subtitulo: meta.subtitulo || '',
-          fase: meta.fase || 'Curso Principal',
-          nivel: meta.nivel || 'Básico',
-          duracion: meta.duracion || '4 horas',
-          prerrequisitos: meta.prerrequisitos || 'Ninguno',
-          color: meta.color || '#2563EB',
-          portada: meta.portada || `assets/img/portadas/modulo-${modNum}.svg`,
-          proyecto_titulo: meta.proyecto_titulo || '',
-          proyecto_desc: meta.proyecto_desc || '',
-          plantilla_modulo: meta.plantilla_modulo || '',
-          resultados: Array.isArray(meta.resultados) ? meta.resultados : [],
-          checkpoint: Array.isArray(meta.checkpoint) ? meta.checkpoint : [],
-          lessons
+        const parsedLec = this.parseFrontmatter(lText);
+        lessons.push({
+          key: `m${modNum}-l${lecNum}`,
+          moduleNum: modNum,
+          lessonNum: lecNum,
+          path: lecPath,
+          meta: {
+            titulo: parsedLec.meta.titulo || `Lección ${lecNum}`,
+            nivel: parsedLec.meta.nivel || meta.nivel || 'Básico',
+            duracion: parsedLec.meta.duracion || '30 min',
+            prerrequisitos: parsedLec.meta.prerrequisitos || 'Ninguno',
+            resumen: parsedLec.meta.resumen || '',
+            entregable: parsedLec.meta.entregable || '',
+            plantilla: parsedLec.meta.plantilla || meta.plantilla_modulo || ''
+          },
+          rawBody: parsedLec.body
         });
-      } catch (e) {
-        if (m > 12) break;
       }
-    }
+
+      return {
+        id: `modulo-${modNum}`,
+        numero: modNum,
+        titulo: meta.titulo || `Módulo ${modNum}`,
+        subtitulo: meta.subtitulo || '',
+        fase: meta.fase || 'Curso Principal',
+        nivel: meta.nivel || 'Básico',
+        duracion: meta.duracion || '4 horas',
+        prerrequisitos: meta.prerrequisitos || 'Ninguno',
+        color: meta.color || '#2563EB',
+        portada: meta.portada || `assets/img/portadas/modulo-${modNum}.svg`,
+        proyecto_titulo: meta.proyecto_titulo || '',
+        proyecto_desc: meta.proyecto_desc || '',
+        plantilla_modulo: meta.plantilla_modulo || '',
+        resultados: Array.isArray(meta.resultados) ? meta.resultados : [],
+        checkpoint: Array.isArray(meta.checkpoint) ? meta.checkpoint : [],
+        lessons
+      };
+    });
+
+    const resolvedModules = await Promise.all(modulePromises);
+    const modules = resolvedModules.filter(Boolean);
 
     // Cargar glosario bilingüe
-    try {
-      const gRes = await fetch('curso/glosario-bilingue.json', { cache: 'no-cache' });
-      if (gRes.ok) {
-        this.glossary = await gRes.json();
+    const gText = await fetchTextWithFallback('curso/glosario-bilingue.json');
+    if (gText) {
+      try {
+        this.glossary = JSON.parse(gText);
+      } catch (e) {
+        console.warn('Error parseando glosario:', e);
       }
-    } catch (e) {
-      console.warn('No se pudo cargar glosario-bilingue.json:', e);
     }
 
     this.catalog = modules;
@@ -145,9 +151,9 @@ export const MarkdownEngine = {
 
   // Cargar Cheat Sheet de un módulo
   async fetchCheatSheet(modNum) {
-    const res = await fetch(`curso/modulo-${modNum}/cheat-sheet.md`, { cache: 'no-cache' });
-    if (!res.ok) throw new Error('No se encontró el Cheat Sheet');
-    const raw = await res.text();
+    const path = `curso/modulo-${modNum}/cheat-sheet.md`;
+    const raw = await fetchTextWithFallback(path);
+    if (!raw) throw new Error('No se encontró el Cheat Sheet');
     return this.parseFrontmatter(raw);
   },
 
@@ -169,7 +175,6 @@ export const MarkdownEngine = {
 
   // Renderiza el cuerpo Markdown de una lección con Mermaid, Chart.js, Callouts, Checklists y Quiz
   async renderLessonBody(containerEl, rawBody, lessonKey) {
-    // Destruir gráficos previos de lecciones para evitar fugas de memoria
     activeLessonCharts.forEach((c) => {
       try { c.destroy(); } catch (e) {}
     });

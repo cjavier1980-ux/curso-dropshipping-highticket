@@ -227,18 +227,7 @@ const App = {
       return m.nivel.toLowerCase() === currentFilterPhase.toLowerCase();
     });
 
-    const fileProtocolWarning = MarkdownEngine.catalog.length === 0 ? `
-      <div class="callout callout-error" style="margin-bottom:1.5rem;">
-        <div class="callout-title">⚡ Abre el portal con el comando de 1 clic (<code>iniciar-portal.bat</code>)</div>
-        <p style="margin:0;">
-          Detectamos que abriste <code>index.html</code> directamente como archivo local (<code>file://</code>). Por seguridad, los navegadores bloquean la lectura dinámica de archivos Markdown externos en ese modo.
-          <strong>Haz doble clic en el archivo <code>iniciar-portal.bat</code></strong> en la carpeta del proyecto para abrirlo en <code>http://localhost:8080</code> con todos los módulos y lecciones activos.
-        </p>
-      </div>
-    ` : '';
-
     containerEl.innerHTML = `
-      ${fileProtocolWarning}
       <!-- Franja de indicadores rápidos -->
       <div class="dashboard-strip" role="region" aria-label="Resumen de tu avance">
         <div class="stat-mini-card">
