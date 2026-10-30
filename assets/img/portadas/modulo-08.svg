@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 135" role="img" aria-label="MÓDULO 08: Tráfico: Shopping y Meta Ads">
+  <defs>
+    <linearGradient id="g08" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="135" fill="url(#g08)"/>
+  <circle cx="355" cy="20" r="60" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="40" cy="115" r="45" fill="rgba(255,255,255,0.08)"/>
+  <polygon points="162,38 238,38 212,70 212,96 188,96 188,70" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+  <text x="200" y="121" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-family="sans-serif" font-size="10.5" font-weight="bold" letter-spacing="1.2">MÓDULO 08 · TRÁFICO: SHOPPING Y META ADS</text>
+</svg>

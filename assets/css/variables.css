@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light;
+
+  /* Superficies - Modo Claro */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-code: #0F172A;
+
+  /* Textos - Modo Claro (Contraste WCAG AA/AAA) */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  /* Bordes y Sombras */
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.06);
+
+  /* Acento Principal */
+  --accent-primary: #2563EB;
+  --accent-primary-hover: #1D4ED8;
+  --accent-primary-soft: #EFF6FF;
+  --accent-primary-border: #BFDBFE;
+
+  /* Estados Semánticos */
+  --status-success: #059669;
+  --status-success-bg: #ECFDF5;
+  --status-success-border: #A7F3D0;
+
+  --status-warning: #D97706;
+  --status-warning-bg: #FFFBEB;
+  --status-warning-border: #FDE68A;
+
+  --status-danger: #DC2626;
+  --status-danger-bg: #FEF2F2;
+  --status-danger-border: #FECACA;
+
+  --status-info: #4F46E5;
+  --status-info-bg: #EEF2FF;
+  --status-info-border: #C7D2FE;
+
+  /* Colores Distintivos por Módulo (00 al 12) */
+  --mod-00: #4F46E5; /* Índigo - Fundamentos */
+  --mod-01: #7C3AED; /* Violeta - Nichos y Productos */
+  --mod-02: #0891B2; /* Cian - Proveedores EE. UU. */
+  --mod-03: #059669; /* Esmeralda - Economía Unitaria */
+  --mod-04: #334155; /* Pizarra Real - Legal y Fiscal */
+  --mod-05: #0284C7; /* Azul Océano - Tienda Bilingüe */
+  --mod-06: #15803D; /* Verde Pino - Pagos y Fraude */
+  --mod-07: #D97706; /* Ámbar - Anglo vs. Hispano */
+  --mod-08: #EA580C; /* Naranja Energía - Tráfico y Ventas */
+  --mod-09: #E11D48; /* Rosa Coral - Conversión Consultiva */
+  --mod-10: #0D9488; /* Turquesa - Operaciones y Servicio */
+  --mod-11: #9333EA; /* Púrpura - Analítica y Escalamiento */
+  --mod-12: #CA8A04; /* Dorado Ejecutivo - Plan 30-60-90 */
+
+  /* Tipografía */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  --lesson-font-family: var(--font-body);
+  --lesson-font-size: 1.0625rem; /* 17px base cómoda para lectura */
+  --lesson-line-height: 1.72;
+
+  /* Layout y Espaciado */
+  --header-height: 60px;
+  --bottom-nav-height: 66px;
+  --sidebar-width: 290px;
+  --toc-width: 250px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modo Oscuro */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-primary: #0B0F19;
+  --bg-secondary: #111827;
+  --bg-surface: #151E32;
+  --bg-elevated: #1E293B;
+  --bg-glass: rgba(15, 23, 42, 0.88);
+  --bg-code: #090D16;
+
+  --text-primary: #F1F5F9;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-inverse: #0F172A;
+
+  --border-subtle: #1E293B;
+  --border-strong: #334155;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.6);
+
+  --accent-primary: #3B82F6;
+  --accent-primary-hover: #60A5FA;
+  --accent-primary-soft: rgba(59, 130, 246, 0.14);
+  --accent-primary-border: rgba(59, 130, 246, 0.35);
+
+  --status-success: #34D399;
+  --status-success-bg: rgba(16, 185, 129, 0.12);
+  --status-success-border: rgba(52, 211, 153, 0.35);
+
+  --status-warning: #FBBF24;
+  --status-warning-bg: rgba(245, 158, 11, 0.12);
+  --status-warning-border: rgba(251, 191, 36, 0.35);
+
+  --status-danger: #F87171;
+  --status-danger-bg: rgba(239, 68, 68, 0.12);
+  --status-danger-border: rgba(248, 113, 113, 0.35);
+
+  --status-info: #818CF8;
+  --status-info-bg: rgba(99, 102, 241, 0.14);
+  --status-info-border: rgba(129, 140, 248, 0.35);
+
+  --mod-04: #64748B;
+}
+
+/* Preferencias de lectura en lección */
+[data-font-size="small"] {
+  --lesson-font-size: 0.95rem;
+}
+[data-font-size="normal"] {
+  --lesson-font-size: 1.0625rem;
+}
+[data-font-size="large"] {
+  --lesson-font-size: 1.2rem;
+}
+[data-font-serif="true"] {
+  --lesson-font-family: var(--font-serif);
+}

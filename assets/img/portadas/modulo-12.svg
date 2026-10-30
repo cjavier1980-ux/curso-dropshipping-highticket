@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 135" role="img" aria-label="MÓDULO 12: Plan Lanzamiento 30-60-90">
+  <defs>
+    <linearGradient id="g12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#FACC15"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="135" fill="url(#g12)"/>
+  <circle cx="355" cy="20" r="60" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="40" cy="115" r="45" fill="rgba(255,255,255,0.08)"/>
+  <rect x="162" y="38" width="76" height="58" rx="6" fill="none" stroke="#fff" stroke-width="3"/><line x1="162" y1="54" x2="238" y2="54" stroke="#fff" stroke-width="2"/><text x="171" y="80" fill="#fff" font-family="monospace" font-size="13" font-weight="bold">30-60-90</text>
+  <text x="200" y="121" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-family="sans-serif" font-size="10.5" font-weight="bold" letter-spacing="1.2">MÓDULO 12 · PLAN LANZAMIENTO 30-60-90</text>
+</svg>

@@ -1,0 +1,170 @@
+[
+  {
+    "termino_es": "Dropshipping de Alto Valor",
+    "termino_en": "High-Ticket Dropshipping",
+    "categoria": "Modelo de Negocio",
+    "definicion": "Modelo de comercio electrónico donde vendes productos de precio elevado (US$150 a US$800+) sin mantener inventario propio, enviando directamente desde distribuidores autorizados o fabricantes domésticos en el país de destino.",
+    "ejemplo": "Vender una pérgola de aluminio o un generador solar de US$580 con envío desde una bodega en Texas al cliente en Florida, obteniendo US$95 de ganancia neta."
+  },
+  {
+    "termino_es": "Economía Unitaria",
+    "termino_en": "Unit Economics",
+    "categoria": "Finanzas",
+    "definicion": "Análisis de los ingresos y todos los costos directos asociados a un solo pedido individual para determinar si cada venta gana o pierde dinero.",
+    "ejemplo": "Precio US$450 - Costo US$260 - Envío US$35 - Pasarela US$13.35 - Publicidad (CPA) US$60 - Provisión devoluciones US$13.50 = Ganancia Neta Unitaria de US$68.15."
+  },
+  {
+    "termino_es": "Costo de los Bienes Vendidos",
+    "termino_en": "COGS (Cost of Goods Sold)",
+    "categoria": "Finanzas",
+    "definicion": "Precio mayorista exacto que te cobra el proveedor por el producto físico antes de sumarle el envío y las comisiones.",
+    "ejemplo": "Si el precio minorista es US$400 y tu lista de distribuidor marca un 35% de descuento, tu COGS es US$260."
+  },
+  {
+    "termino_es": "Precio Mínimo Anunciado",
+    "termino_en": "MAP (Minimum Advertised Price)",
+    "categoria": "Proveedores",
+    "definicion": "Contrato o política impuesta por una marca o fabricante que prohíbe a todos sus distribuidores anunciar el producto por debajo de un precio mínimo oficial.",
+    "ejemplo": "El fabricante fija el MAP en US$399. Ninguna tienda autorizada puede publicarlo a US$349, lo cual protege tu margen de ganancia frente a guerras de precios."
+  },
+  {
+    "termino_es": "Precio de Venta Sugerido por el Fabricante",
+    "termino_en": "MSRP (Manufacturer's Suggested Retail Price)",
+    "categoria": "Proveedores",
+    "definicion": "Precio de lista oficial recomendado por la marca. Suele ser superior o igual al precio MAP.",
+    "ejemplo": "MSRP: US$499 / Precio MAP (precio real en tiendas): US$429."
+  },
+  {
+    "termino_es": "Distribuidor Autorizado",
+    "termino_en": "Authorized Dealer",
+    "categoria": "Proveedores",
+    "definicion": "Comerciante que tiene contrato oficial con la marca o distribuidor mayorista para vender sus productos con respaldo de garantía de fábrica y sin riesgo de reclamos de propiedad intelectual.",
+    "ejemplo": "Al firmar el acuerdo de Authorized Dealer, el fabricante respalda la garantía de 2 años para tus compradores."
+  },
+  {
+    "termino_es": "Costo por Adquisición",
+    "termino_en": "CPA (Cost Per Acquisition)",
+    "categoria": "Marketing",
+    "definicion": "Gasto publicitario promedio necesario para conseguir una venta pagada.",
+    "ejemplo": "Si invertiste US$180 en Google Shopping y lograste 3 pedidos, tu CPA es de US$60 por pedido."
+  },
+  {
+    "termino_es": "Retorno sobre el Gasto Publicitario",
+    "termino_en": "ROAS (Return On Ad Spend)",
+    "categoria": "Marketing",
+    "definicion": "Ingresos brutos generados por cada dólar invertido en publicidad. Se calcula dividiendo Ventas atribuibles ÷ Gasto publicitario.",
+    "ejemplo": "Si gastas US$100 en anuncios y vendes un producto de US$500, tu ROAS es de 5.0x (o 500%)."
+  },
+  {
+    "termino_es": "ROAS de Equilibrio",
+    "termino_en": "Break-Even ROAS",
+    "categoria": "Finanzas",
+    "definicion": "El ROAS mínimo que necesita una campaña para no perder ni ganar dinero después de pagar producto, envío, pasarela y devoluciones. Se calcula como 1 ÷ Margen de Contribución Antes de Publicidad (%).",
+    "ejemplo": "Si tu margen antes de anuncios es del 25%, tu Break-Even ROAS es 1 ÷ 0.25 = 4.0x. Con un ROAS mayor a 4.0x generas ganancia neta."
+  },
+  {
+    "termino_es": "Punto de Equilibrio Mensual",
+    "termino_en": "Break-Even Point",
+    "categoria": "Finanzas",
+    "definicion": "Número mínimo de pedidos mensuales necesarios para cubrir todos los gastos fijos del negocio (suscripción de tienda, dominio, telefonía, software).",
+    "ejemplo": "Si tus costos fijos mensuales son US$80 y ganas US$55 netos por pedido, tu punto de equilibrio es de 2 pedidos al mes."
+  },
+  {
+    "termino_es": "Valor Promedio del Pedido",
+    "termino_en": "AOV (Average Order Value)",
+    "categoria": "Finanzas",
+    "definicion": "Monto promedio en dólares que gasta un cliente cada vez que compra en tu tienda.",
+    "ejemplo": "Si 10 clientes compran un total de US$3,800 en el mes, tu AOV es de US$380."
+  },
+  {
+    "termino_es": "Compra Ahora, Paga Después",
+    "termino_en": "BNPL (Buy Now, Pay Later)",
+    "categoria": "Pagos y Fraude",
+    "definicion": "Financiamiento instantáneo en el checkout (Shop Pay Installments, Affirm, Klarna) donde el cliente paga en cuotas y tú recibes el monto total por adelantado menos una comisión (usualmente 5% a 6%).",
+    "ejemplo": "Un cliente hispano o anglo compra un equipo de US$600 pagando 4 cuotas de US$150 sin interés; tú recibes US$564 al instante y eliminas la fricción del precio alto."
+  },
+  {
+    "termino_es": "Contracargo / Disputa Bancaria",
+    "termino_en": "Chargeback",
+    "categoria": "Pagos y Fraude",
+    "definicion": "Reversión forzosa de fondos iniciada por el titular de la tarjeta ante su banco emisor alegando fraude, no recepción del producto o producto distinto a lo descrito.",
+    "ejemplo": "Un contracargo en un pedido de US$400 te cuesta los US$400 más una multa de US$15 del procesador si no presentas pruebas de entrega con firma y verificación AVS."
+  },
+  {
+    "termino_es": "Sistema de Verificación de Dirección",
+    "termino_en": "AVS (Address Verification System)",
+    "categoria": "Pagos y Fraude",
+    "definicion": "Herramienta antifraude de la pasarela de pagos que compara la dirección de facturación ingresada en la compra con la dirección registrada en el banco emisor de la tarjeta.",
+    "ejemplo": "Si el filtro AVS indica que el código postal no coincide y el envío va a otra dirección en un pedido de US$550, el protocolo exige llamar al cliente antes de despachar."
+  },
+  {
+    "termino_es": "Reserva Rodante / Retención de Fondos",
+    "termino_en": "Rolling Reserve / Account Hold",
+    "categoria": "Pagos y Fraude",
+    "definicion": "Porcentaje de tus ventas (ej. 10% a 20%) que el procesador de pagos retiene temporalmente durante 30 a 90 días como garantía ante posibles devoluciones o contracargos en tiendas nuevas de alto ticket.",
+    "ejemplo": "Debes contar con capital de trabajo o línea de crédito para pagar al proveedor aunque Stripe retenga el 10% durante los primeros 45 días."
+  },
+  {
+    "termino_es": "Certificado de Reventa",
+    "termino_en": "Resale Certificate / Seller's Permit",
+    "categoria": "Legal y Fiscal",
+    "definicion": "Documento fiscal estatal en EE. UU. que acredita que compras mercancía para revenderla al consumidor final, permitiéndote comprar a los distribuidores mayoristas sin que te cobren Sales Tax.",
+    "ejemplo": "Al entregar el formulario de Resale Certificate al proveedor mayorista, ahorras entre un 6% y un 9% de impuesto en cada orden de compra."
+  },
+  {
+    "termino_es": "Nexo Fiscal de Impuesto sobre las Ventas",
+    "termino_en": "Sales Tax Nexus (Physical & Economic)",
+    "categoria": "Legal y Fiscal",
+    "definicion": "Vínculo legal (por presencia física como oficina/bodega o por superar un umbral económico de ventas anuales en un estado, típicamente US$100,000 o 200 transacciones) que te obliga a recaudar y declarar Sales Tax en ese estado.",
+    "ejemplo": "Si tu LLC está registrada en Florida, tienes nexo en Florida desde el día 1 y debes configurar Shopify para cobrar Sales Tax a compradores de Florida."
+  },
+  {
+    "termino_es": "Localización Cultural",
+    "termino_en": "Localization / Transcreation",
+    "categoria": "Marketing Bilingüe",
+    "definicion": "Adaptar el mensaje, las señales de confianza, las unidades de medida, las expresiones y los argumentos de venta a la realidad cultural del comprador en lugar de traducir palabra por palabra.",
+    "ejemplo": "No traducir 'Heavy-duty commercial grade' como 'Grado comercial de deber pesado', sino localizarlo como 'Uso rudo comercial con garantía en EE. UU.'."
+  },
+  {
+    "termino_es": "Peso Volumétrico / Dimensional",
+    "termino_en": "Dimensional Weight (DIM Weight)",
+    "categoria": "Operaciones",
+    "definicion": "Fórmula que usan transportistas como UPS y FedEx (Largo x Ancho x Alto en pulgadas ÷ 139) para cobrar el envío según el espacio que ocupa la caja en el camión cuando es grande pero liviana.",
+    "ejemplo": "Una lámpara grande pesa solo 12 lb físicas, pero su caja mide 36x24x24 pulgadas (DIM Weight = 150 lb), por lo que el envío cuesta US$85 en lugar de US$18."
+  },
+  {
+    "termino_es": "Envío de Carga en Tarima / Palé",
+    "termino_en": "LTL Freight (Less-Than-Truckload)",
+    "categoria": "Operaciones",
+    "definicion": "Transporte especializado para productos que superan los límites de paquetería estándar (más de 150 lb o dimensiones grandes), entregado en camión con plataforma elevadora (liftgate) y cita previa.",
+    "ejemplo": "Una caja fuerte o sauna infrarrojo de US$780 viaja por LTL Freight con entrega en acera (curbside delivery)."
+  },
+  {
+    "termino_es": "Autorización de Devolución de Mercancía",
+    "termino_en": "RMA (Return Merchandise Authorization)",
+    "categoria": "Operaciones",
+    "definicion": "Número de folio y aprobación formal que emite el proveedor para aceptar la devolución de un producto en su bodega y procesar el reembolso o reemplazo.",
+    "ejemplo": "Nunca aceptes una devolución sin antes solicitar el número RMA y la dirección exacta de la bodega de retornos de tu proveedor."
+  },
+  {
+    "termino_es": "Cargo por Reabastecimiento",
+    "termino_en": "Restocking Fee",
+    "categoria": "Operaciones",
+    "definicion": "Comisión (generalmente del 10% al 20%) que cobran los proveedores de alto valor por inspeccionar y reingresar al inventario un producto devuelto por arrepentimiento del comprador (remorse return).",
+    "ejemplo": "Tu política de devoluciones debe reflejar claramente el mismo Restocking Fee del 15% en devoluciones que no sean por defecto de fábrica."
+  },
+  {
+    "termino_es": "Orden de Compra al Proveedor",
+    "termino_en": "PO (Purchase Order)",
+    "categoria": "Operaciones",
+    "definicion": "Documento oficial que envías a tu proveedor mayorista solicitando el despacho de un SKU específico a la dirección de tu cliente final.",
+    "ejemplo": "Tras verificar que el pago del pedido #1024 no tiene riesgo de fraude, envías la PO #1024 al departamento de órdenes del proveedor."
+  },
+  {
+    "termino_es": "Orden Borrador / Enlace de Pago Directo",
+    "termino_en": "Draft Order / Custom Checkout Link",
+    "categoria": "Conversión Consultiva",
+    "definicion": "Pedido creado manualmente por ti en el panel de la tienda mientras hablas con el cliente por teléfono o WhatsApp, enviándole un enlace listo para pagar en 1 clic.",
+    "ejemplo": "Durante la llamada en español, armas el Draft Order con el producto y el envío incluidos y se lo mandas por WhatsApp para que cierre la compra al instante."
+  }
+]

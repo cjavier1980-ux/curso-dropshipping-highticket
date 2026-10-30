@@ -1,0 +1,25 @@
+---
+id: "modulo-00"
+numero: "00"
+titulo: "Fundamentos, Expectativas Realistas y Modelo High-Ticket"
+subtitulo: "Cómo funciona realmente el dropshipping de alto valor en EE. UU., cuáles son sus riesgos y cómo convertir tu experiencia en ventas telefónicas en una ventaja injusta."
+fase: "Fase A: Cimientos y Selección"
+nivel: "Básico"
+duracion: "3 horas (1.5 h estudio + 1.5 h práctica)"
+prerrequisitos: "Ninguno"
+color: "#4F46E5"
+portada: "assets/img/portadas/modulo-00.svg"
+proyecto_titulo: "Carta Operativa Personal y Reglas de Riesgo"
+proyecto_desc: "Redactar y firmar tu documento rector con tu presupuesto inicial protegido (US$1,500), tus 12 horas semanales asignadas por bloques, tu horario de atención telefónica/WhatsApp y tus reglas éticas de selección de catálogo."
+plantilla_modulo: "m00-carta-operativa-personal.md"
+resultados:
+  - "Diferenciar el dropshipping de compra impulsiva (low-ticket) del comercio electrónico consultivo de alto valor (high-ticket dropshipping)."
+  - "Comprender el flujo real del dinero y de la orden entre el cliente, la pasarela de pagos, tu tarjeta de capital de trabajo y el proveedor en EE. UU."
+  - "Identificar los riesgos operativos reales (rotura de inventario, retenciones bancarias, contracargos y anuncios sin retorno) y cómo prevenirlos."
+  - "Diseñar tu ventaja competitiva usando tu experiencia en ventas por teléfono y atención al cliente para el mercado anglo e hispano."
+checkpoint:
+  - "Definí por escrito mi presupuesto de arranque y pruebas (ej. US$1,500) separado de mi línea de capital de trabajo para flotar pedidos."
+  - "Bloqueé mis 12 horas semanales en el calendario, incluyendo franjas para atender consultas por teléfono o WhatsApp."
+  - "Comprendo que nunca debo publicar escasez falsa, tiempos de envío irreales ni vender marcas sin autorización (Authorized Dealer)."
+  - "Completé las 3 lecciones y aprobé los mini quizzes del Módulo 00."
+---

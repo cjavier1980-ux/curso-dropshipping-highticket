@@ -1,0 +1,25 @@
+---
+id: "modulo-01"
+numero: "01"
+titulo: "Nichos y Productos: Criterios, Investigación de Demanda y Validación"
+subtitulo: "Cómo seleccionar un catálogo de 3 a 10 productos entre US$150 y US$800 con demanda real en inglés y español en EE. UU., sin riesgo de marca ni envíos que destruyan tu margen."
+fase: "Fase A: Cimientos y Selección"
+nivel: "Básico"
+duracion: "6 horas (2.5 h estudio + 3.5 h investigación práctica)"
+prerrequisitos: "Módulo 00 completado"
+color: "#7C3AED"
+portada: "assets/img/portadas/modulo-01.svg"
+proyecto_titulo: "Matriz de Validación de 3 Nichos y 15 Productos Preseleccionados"
+proyecto_desc: "Investigar y filtrar 15 productos candidatos en el mercado de EE. UU. (entre US$150 y US$800) que superen los 10 Filtros de Oro, el análisis de demanda bilingüe y el pre-filtro de peso volumétrico."
+plantilla_modulo: "m01-matriz-validacion-nichos-productos.csv"
+resultados:
+  - "Aplicar los 10 Filtros de Oro para aprobar únicamente productos de US$150 a US$800 capaces de dejar US$40+ de ganancia neta."
+  - "Evitar categorías reguladas, extremadamente frágiles, con alta tasa de devolución (tallas/moda) o marcas con reventa prohibida."
+  - "Investigar volumen de búsqueda con intención de compra comercial en inglés y español dentro de EE. UU."
+  - "Calcular el Peso Volumétrico (Dimensional Weight) antes de elegir un producto para evitar sorpresas de flete en UPS y FedEx."
+checkpoint:
+  - "Tengo mi hoja de cálculo con al menos 10 a 15 productos candidatos entre US$150 y US$800."
+  - "Ningún producto de mi lista está en la Lista Negra (cristal frágil, suplementos/FDA, armas, baterías peligrosas sin certificar, ropa/calzado o marcas exclusivas DTC)."
+  - "Verifiqué el Peso Volumétrico (L x W x H / 139) de cada candidato y estimé su ganancia neta preliminar en >= US$40."
+  - "Completé las 4 lecciones y aprobé los mini quizzes del Módulo 01."
+---

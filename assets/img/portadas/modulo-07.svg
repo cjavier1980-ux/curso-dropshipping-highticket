@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 135" role="img" aria-label="MÓDULO 07: Dos Mercados: Anglo + Hispano">
+  <defs>
+    <linearGradient id="g07" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="135" fill="url(#g07)"/>
+  <circle cx="355" cy="20" r="60" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="40" cy="115" r="45" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="185" cy="66" r="24" fill="none" stroke="#fff" stroke-width="3"/><circle cx="215" cy="66" r="24" fill="none" stroke="#FEF08A" stroke-width="3"/>
+  <text x="200" y="121" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-family="sans-serif" font-size="10.5" font-weight="bold" letter-spacing="1.2">MÓDULO 07 · DOS MERCADOS: ANGLO + HISPANO</text>
+</svg>

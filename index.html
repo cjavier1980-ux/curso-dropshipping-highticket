@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" data-font-size="normal" data-font-serif="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia High-Ticket Dropshipping Bilingüe (EE. UU.) — Portal del Curso</title>
+  <meta name="description" content="Curso práctico, modular y visual de Dropshipping de Alto Valor (US$150-US$800) para el mercado anglo e hispano en Estados Unidos." />
+
+  <!-- Tipografías Google Fonts con fallback instantáneo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Hojas de estilo modulares -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/print-cheatsheet.css" />
+
+  <!-- Librerías para Markdown, Sanitización, Diagramas Mermaid y Gráficos Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+  <!-- Enlace de accesibilidad por teclado -->
+  <a href="#app-main" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Cabecera Superior Fija -->
+  <header class="app-header" role="banner">
+    <div style="display:flex; align-items:center; gap:0.55rem;">
+      <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú de módulos">
+        ☰
+      </button>
+      <a href="#/inicio" class="brand-logo" aria-label="Ir al inicio del curso">
+        <span class="brand-badge">HT</span>
+        <span>High-Ticket <span style="color:var(--accent-primary);">Bilingüe</span></span>
+      </a>
+    </div>
+
+    <!-- Navegación Superior para Escritorio -->
+    <nav class="desktop-top-nav" aria-label="Navegación principal">
+      <button type="button" class="top-nav-link active" data-route-nav="inicio" onclick="window.location.hash='#/inicio'">🏠 Módulos</button>
+      <button type="button" class="top-nav-link" data-route-nav="calculadoras" onclick="window.location.hash='#/calculadoras'">🧮 Calculadoras</button>
+      <button type="button" class="top-nav-link" data-route-nav="glosario" onclick="window.location.hash='#/glosario'">📖 Glosario EN/ES</button>
+      <button type="button" class="top-nav-link" data-route-nav="plantillas" onclick="window.location.hash='#/plantillas'">📥 Plantillas</button>
+      <button type="button" class="top-nav-link" data-route-nav="progreso" onclick="window.location.hash='#/progreso'">📊 Mi Progreso</button>
+    </nav>
+
+    <!-- Acciones Globales: Búsqueda y Modo Claro/Oscuro -->
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="open-search-btn" aria-label="Buscar en lecciones y glosario (Ctrl+K)">
+        🔍 <span style="font-size:0.8rem;">Buscar</span>
+      </button>
+      <button type="button" class="icon-btn" id="theme-toggle-btn" aria-label="Cambiar entre modo claro y oscuro">
+        🌙 Oscuro
+      </button>
+    </div>
+  </header>
+
+  <!-- Barra Superior de Progreso de Lectura -->
+  <div class="reading-progress-container" aria-hidden="true">
+    <div class="reading-progress-bar" id="reading-progress-bar"></div>
+  </div>
+
+  <!-- Fondo para cerrar el menú lateral en celular -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Contenedor Principal (Sidebar + Contenido) -->
+  <div class="app-layout">
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Mapa de módulos del curso">
+      <div style="padding:0 0.5rem 0.75rem; border-bottom:1px solid var(--border-subtle);">
+        <strong style="font-size:0.86rem; display:block;">Ruta de Aprendizaje</strong>
+        <span style="font-size:0.76rem; color:var(--text-muted);">De 0 a operación estable en EE. UU.</span>
+      </div>
+
+      <div class="sidebar-section-title">Módulos (00 al 12)</div>
+      <ul class="sidebar-module-list" id="sidebar-modules-list"></ul>
+
+      <div class="sidebar-section-title">Herramientas</div>
+      <ul class="sidebar-module-list">
+        <li><button type="button" class="sidebar-module-btn" onclick="window.location.hash='#/calculadoras'">🧮 Calculadoras Interactivas</button></li>
+        <li><button type="button" class="sidebar-module-btn" onclick="window.location.hash='#/glosario'">📖 Glosario Bilingüe</button></li>
+        <li><button type="button" class="sidebar-module-btn" onclick="window.location.hash='#/plantillas'">📥 Plantillas Descargables</button></li>
+        <li><button type="button" class="sidebar-module-btn" onclick="window.location.hash='#/progreso'">📊 Panel de Progreso</button></li>
+      </ul>
+    </aside>
+
+    <main class="app-main" id="app-main" role="main" tabindex="-1"></main>
+  </div>
+
+  <!-- Barra de Navegación Inferior Fija para Celular (Mobile-First) -->
+  <nav class="bottom-nav" aria-label="Navegación móvil inferior">
+    <button type="button" class="bottom-nav-item active" data-route-nav="inicio" onclick="window.location.hash='#/inicio'">
+      <span class="nav-icon">🏠</span>
+      <span>Módulos</span>
+    </button>
+    <button type="button" class="bottom-nav-item" data-route-nav="calculadoras" onclick="window.location.hash='#/calculadoras'">
+      <span class="nav-icon">🧮</span>
+      <span>Calculadoras</span>
+    </button>
+    <button type="button" class="bottom-nav-item" data-route-nav="glosario" onclick="window.location.hash='#/glosario'">
+      <span class="nav-icon">📖</span>
+      <span>Glosario</span>
+    </button>
+    <button type="button" class="bottom-nav-item" data-route-nav="plantillas" onclick="window.location.hash='#/plantillas'">
+      <span class="nav-icon">📥</span>
+      <span>Plantillas</span>
+    </button>
+    <button type="button" class="bottom-nav-item" data-route-nav="progreso" onclick="window.location.hash='#/progreso'">
+      <span class="nav-icon">📊</span>
+      <span>Progreso</span>
+    </button>
+  </nav>
+
+  <!-- Modal de Búsqueda Global Instantánea -->
+  <div class="search-modal-backdrop" id="search-modal-backdrop" role="dialog" aria-modal="true" aria-label="Buscador global del curso">
+    <div class="search-modal">
+      <div class="search-input-header">
+        <span>🔍</span>
+        <input type="search" id="global-search-input" class="search-modal-input" placeholder="Buscar en todas las lecciones y glosario (ej. MAP, FTC, proveedores, peso dimensional, BNPL)..." aria-label="Escribir término de búsqueda" />
+        <button type="button" class="btn btn-secondary btn-sm" id="close-search-btn">Cerrar (Esc)</button>
+      </div>
+      <div class="search-results-list" id="global-search-results"></div>
+    </div>
+  </div>
+
+  <!-- Aplicación Principal ES Modules -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

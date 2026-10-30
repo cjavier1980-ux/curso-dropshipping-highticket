@@ -1,0 +1,13 @@
+﻿Concepto Financiero,Producto A (Ticket Medio),Producto B (Ticket Alto),Producto C (Con Financiamiento BNPL),Formula / Notas Explicativas
+Precio de Venta (MAP / Retail USD),380.00,650.00,520.00,Precio cobrado al cliente en EE.UU. (Envio incluido)
+Costo del Producto (COGS USD),-215.00,-380.00,-300.00,Precio mayorista del proveedor en EE.UU.
+Costo de Envio Domestico (Shipping USD),-32.00,-58.00,-42.00,Tarifa real UPS/FedEx Ground considerando Peso Dimensional
+Comision Pasarela Pago (2.9% + $0.30 o BNPL 5.9%),-11.32,-19.15,-30.98,Shopify Payments Basic (2.9%+$0.30) o BNPL (5.9%+$0.30)
+Provision Devoluciones y Garantias (3%),-11.40,-19.50,-15.60,Reserva estadistica para cubrir RMA / envios de retorno
+Provision Contracargos / Fraude (0.5%),-1.90,-3.25,-2.60,Reserva preventiva ante disputas
+MARGEN DE CONTRIBUCION ANTES DE ADS (USD),108.38,170.10,128.82,Este es tu CPA Maximo Permitido (Break-Even CPA)
+ROAS DE EQUILIBRIO (Break-Even ROAS),3.51,3.82,4.04,Precio de Venta / Margen Antes de Ads
+Costo por Adquisicion Estimado (CPA Publicidad USD),-55.00,-85.00,-65.00,Gasto publicitario promedio por venta cerrada
+GANANCIA NETA REAL POR PEDIDO (USD),53.38,85.10,63.82,Debe ser SIEMPRE >= US$40.00 para aprobar el producto
+Margen Neto Real (%),14.05%,13.09%,12.27%,Ganancia Neta / Precio de Venta
+Pedidos Mensuales para Meta de US$2500,47,30,40,US$2500 / Ganancia Neta por Pedido

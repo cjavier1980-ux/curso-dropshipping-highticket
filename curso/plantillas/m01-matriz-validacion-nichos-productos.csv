@@ -1,0 +1,6 @@
+﻿ID,Nicho Candidato,Producto Especifico (SKU),Precio Venta Estimado (USD),Costo Proveedor Est. (COGS USD),Peso Real (lb),Dimensiones Caja (L x W x H in),Peso Dimensional (L*W*H/139),Costo Envio Est. (USD),Busquedas Mensuales EN,Busquedas Mensuales ES,Pasa 10 Filtros de Oro (SI/NO),Dominado por Amazon/Marca DTC (SI/NO),Ganancia Neta Estimada (USD),Decision (GO / NO-GO)
+1,Equipamiento Exterior / Patio,Calentador de Patio Comercial Acero Inox,380,210,34,32x18x18,75,38,2400,650,SI,NO,61.68,GO
+2,Energia Portatil Hogar,Estacion de Energia Solar Portatil 600W,490,285,16,16x12x12,17,22,5400,1200,SI,NO,82.59,GO
+3,Mobiliario Ergonomico Oficina,Escritorio Elevable Electrico Doble Motor,420,235,62,48x24x8,67,42,3900,820,SI,NO,57.82,GO
+4,Taller y Garaje Residencial,Gabinete Rodante de Herramientas Acero 46 in,650,390,115,50x22x38,301,95,1900,480,SI,NO,54.15,GO
+5,Cocina Semi-Profesional,Cortadora de Fiambres Comercial 10 Pulgadas,340,185,38,24x20x18,63,32,1600,590,SI,NO,52.64,GO
